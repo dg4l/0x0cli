@@ -67,7 +67,7 @@ int main(int argc, char** argv){
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&response_data);
     curl_easy_setopt(curl, CURLOPT_URL, "https://0x0.st");
     curl_easy_setopt(curl, CURLOPT_USERAGENT, "0x0cli/0.1");
-    if (file){
+    if (filename){
         curl_formadd(&post, &last, CURLFORM_COPYNAME, "file", CURLFORM_FILE, filename, CURLFORM_END);
     }
     if (secret){
